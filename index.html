@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="confetti"></canvas>
+
+    <main class="app-container">
+        <!-- Navigation Indicators -->
+        <div class="nav-dots">
+            <div class="dot active" data-target="entrance"></div>
+            <div class="dot" data-target="memes"></div>
+            <div class="dot" data-target="wishes"></div>
+            <div class="dot" data-target="celebration"></div>
+        </div>
+
+        <!-- Section 1: The Entrance (refined card) -->
+        <section id="entrance" class="page-section active">
+            <div class="container">
+                <div class="card" id="birthdayCard">
+                    <div class="card-content front">
+                        <h1 class="script-font">For You</h1>
+                        <p class="click-instruction">Tap to open</p>
+                    </div>
+
+                    <div class="card-content back">
+                        <h2 class="title">Hey Birthday Girl!</h2>
+                        <div class="message-body">
+                            <p>Ready for your birthday adventure?</p>
+                            <p>Swipe up or click 'Next' to start.</p>
+                        </div>
+                        <button class="glow-on-hover nav-btn" data-next="memes">Start the Journey ➜</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Fun (Memes) -->
+        <section id="memes" class="page-section">
+            <h2 class="section-title">Vibes Today 💅</h2>
+            <div class="meme-grid">
+                <!-- Placeholders since generation failed -->
+                <div class="polaroid" style="transform: rotate(-3deg);">
+                    <div class="polaroid-img-placeholder" style="background: #ffb7b2;">🐱</div>
+                    <p class="caption">Another year wisely wasted</p>
+                </div>
+                <div class="polaroid" style="transform: rotate(2deg);">
+                    <div class="polaroid-img-placeholder" style="background: #ffdac1;">🐶</div>
+                    <p class="caption">Did someone say CAKE??</p>
+                </div>
+                <div class="polaroid" style="transform: rotate(-1deg);">
+                    <div class="polaroid-img-placeholder" style="background: #e2f0cb;">👑</div>
+                    <p class="caption">Queen of everything</p>
+                </div>
+            </div>
+            <button class="glow-on-hover nav-btn" data-next="wishes">Next: The Feels ➜</button>
+        </section>
+
+        <!-- Section 3: The Sentimental -->
+        <section id="wishes" class="page-section">
+            <div class="emotional-container">
+                <h2 class="section-title">My Wish For You...</h2>
+                <div class="scrolling-wishes">
+                    <p class="wish-item">Start every day with a smile.</p>
+                    <p class="wish-item">Find joy in the little things.</p>
+                    <p class="wish-item">Chase your wildest dreams.</p>
+                    <p class="wish-item">Eat as much cake as you want!</p>
+                </div>
+                <button class="glow-on-hover nav-btn" data-next="celebration">Final Surprise ➜</button>
+            </div>
+        </section>
+
+        <!-- Section 4: The Celebration -->
+        <section id="celebration" class="page-section">
+            <h2 class="section-title">Make a Wish! 🎂</h2>
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="plate"></div>
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+                    <div class="icing"></div>
+                    <div class="drip drip1"></div>
+                    <div class="drip drip2"></div>
+                    <div class="drip drip3"></div>
+                    <div class="candle">
+                        <div class="flame" id="flame"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction-text">Tap the flame to blow it out!</p>
+            <button id="mosaicBtn" class="glow-on-hover nav-btn hidden" data-next="mosaic">See The Masterpiece
+                ➜</button>
+        </section>
+
+        <!-- Section 5: The Masterpiece (Photo Pile) -->
+        <section id="mosaic" class="page-section">
+            <h2 class="section-title">Memories ✨</h2>
+            <div class="mosaic-container">
+                <!-- Javascript will fill this with the photo pile -->
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
